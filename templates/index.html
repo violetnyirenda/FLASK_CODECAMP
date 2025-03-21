@@ -16,7 +16,12 @@
     
     {% for task in tasks %}
     <tr>
-      <td>{{task.content}}</td>
+      <td>
+        <div class="checkbox-container">
+          <input type="checkbox" name="taskCheckbox"  />
+          {{task.content}}
+        </div>
+      </td>
       <td>{{task.date_created.date()}}</td>
       <td>
         <a href="/delete/{{task.id}}">Delete</a>
